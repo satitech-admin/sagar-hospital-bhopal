@@ -16,6 +16,14 @@
 - Live FAQ chat, doctor-team filtering, searchable departments and booking handoff retained
 - Illustrative photography, not official hospital images; replace after hospital approval
 
+## Mobile responsiveness update (October 30, 2026)
+- Mobile-first responsive styles tested at source/syntax level (not yet browser/device QA).
+- Hamburger navigation with aria-expanded state, Escape close and touch-sized controls.
+- Responsive photo heroes, cinematic hero composition and correctly stacked content.
+- Single-column department/doctor cards on phones, two-column quick links when space permits.
+- Responsive gallery thumbnails, forms, CTAs, footer and repositioned WhatsApp/chat buttons.
+- 320px narrow-device layout and reduced-motion support.
+
 ## Features
 - Responsive multi-page experience using hash-based routing (GitHub Pages-friendly)
 - Home, About, Departments, Doctors, OPD Appointment Demo, Patient Guide, Contact
