@@ -137,7 +137,123 @@ body{overflow-x:hidden}
 .whatsapp-form .btn{width:100%}
 .wa-hint{font-size:11px;color:#577a6b;line-height:1.55;margin-top:10px}
 @media(max-width:520px){.photo-pagehead{min-height:360px}.photo-pagehead .container{padding-top:49px;padding-bottom:58px}.photo-pagehead h1{font-size:39px}.photo-pagehead .hero-tag{display:none}.whatsapp-fab{right:18px;bottom:91px;width:51px;height:51px;font-size:23px}.chat-toggle{right:18px;bottom:21px;width:52px;height:52px}}
-</style></head><body><div class="loader" id="loader"><div style="text-align:center"><div class="pulse" style="margin:auto"><i class="fa-solid fa-heart-pulse"></i></div><p style="color:white;font-weight:800;margin-top:24px">SAGAR MULTISPECIALITY HOSPITAL</p><small>WE CARE • WE CURE</small></div></div><div id="scrollProgress" aria-hidden="true"></div><div class="topbar"><div class="container"><span><i class="fa-solid fa-location-dot"></i> Main Hoshangabad Road, Bhopal, MP</span><span><i class="fa-solid fa-phone-volume"></i> 24/7 Helpline: <a href="tel:7880161616">7880161616</a> &nbsp;&nbsp; <i class="fa-solid fa-envelope"></i> <a href="mailto:contact@smhbhopal.com">contact@smhbhopal.com</a></span></div></div><header class="nav"><div class="container nav-inner"><a href="#/" class="brand"><span class="brand-mark"><i class="fa-solid fa-heart-pulse"></i></span><span>Sagar <span style="color:#1caa81">Multispeciality</span><br>Hospital<em>WE CARE • WE CURE</em></span></a><nav id="navlinks" class="navlinks"><a href="#/">Home</a><a href="#/about">About</a><a href="#/departments">Departments</a><a href="#/doctors">Doctors</a><a href="#/appointments">OPD Booking</a><a href="#/patients">Patient Guide</a><a href="#/contact">Contact</a></nav><a class="btn nav-cta" href="#/appointments"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a><button class="menu-btn" aria-label="Toggle navigation" id="menu"><i class="fa-solid fa-bars"></i></button></div></header><main id="app" aria-live="polite"></main><footer class="footer"><div class="container"><div class="footergrid"><div><div class="brand"><span class="brand-mark"><i class="fa-solid fa-heart-pulse"></i></span><span>Sagar Multispeciality<br>Hospital</span></div><p>Care with compassion, expertise and an unwavering commitment to the people of Bhopal.</p><p class="mini" style="color:#b7d7d5">Independent digital experience prototype. Not the hospital's official booking or medical records system.</p></div><div><h4>Explore</h4><a href="#/about">About Us</a><br><a href="#/departments">Departments</a><br><a href="#/doctors">Doctors</a><br><a href="#/patients">Patient Guide</a></div><div><h4>Patient Services</h4><a href="#/appointments">Appointment Demo</a><br><a target="_blank" rel="noopener" href="https://patient-portal.smhbhopal.com/book-appointment">Official Booking Portal</a><br><a href="#/contact">Contact & Directions</a><br><a href="tel:7880161616">Emergency Helpline</a><br><a href="https://wa.me/917880081306?text=Hello%20Sagar%20Multispeciality%20Hospital%2C%20I%20have%20a%20general%20enquiry." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry</a></div><div><h4>Get In Touch</h4><p>Main Hoshangabad Road, Near Shri Ram Colony, Bhopal, MP 462026</p><a href="tel:7880161616">7880161616</a><br><a href="mailto:contact@smhbhopal.com">contact@smhbhopal.com</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Sagar Multispeciality Hospital — Independent interface demonstration.</span><span>Digital concept by Maa Sati Technologies</span></div></div></footer><div class="chat" id="chat" role="dialog" aria-label="Hospital FAQ assistant"><div class="chat-header"><i class="fa-solid fa-headset"></i> SMH Guide <span style="font-weight:400;font-size:11px">— FAQ demo, not medical advice</span> <button id="closechat" style="float:right;background:none;border:0;color:white" aria-label="Close chat">✕</button></div><div id="messages" class="chat-messages"><div class="bubble">Hi! I can help with departments, appointment booking, OPD schedules, insurance and contact details. For emergencies, call <a href="tel:7880161616"><b>7880161616</b></a>.</div></div><form class="chat-form" id="chat-form"><input id="chat-input" required maxlength="250" aria-label="Ask a question" placeholder="Ask about appointments, doctors..." autocomplete="off"><button aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button></form></div><a class="whatsapp-fab" id="wa-float" aria-label="Contact Sagar Hospital on WhatsApp" target="_blank" rel="noopener" href="https://wa.me/917880081306?text=Hello%20Sagar%20Multispeciality%20Hospital%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."><i class="fa-brands fa-whatsapp"></i></a><button class="chat-toggle" id="chat-toggle" aria-label="Open hospital FAQ assistant"><i class="fa-regular fa-comment-dots"></i></button><script>
+
+/* Mobile-first responsive remediation — 320px to tablet and desktop */
+html,body{max-width:100%;overflow-x:clip}
+img,video,iframe,svg{max-width:100%}
+img{height:auto}
+main{min-height:45vh}
+.nav-inner{min-width:0}
+.brand{min-width:0}
+.brand>span:last-child{min-width:0}
+.navlinks a{touch-action:manipulation}
+.btn,.pill,.slide-btn,.gallery-thumb,.menu-btn{touch-action:manipulation}
+@media(max-width:1100px){.navlinks{gap:11px}.navlinks a{font-size:11px}.brand{font-size:16px}.nav-cta{padding:12px}}
+@media(max-width:920px){
+.navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;z-index:40;padding:14px 24px 24px;flex-direction:column;align-items:stretch;gap:2px;max-height:calc(100dvh - 72px);overflow-y:auto;box-shadow:0 18px 32px #07343b21}
+.navlinks.open{display:flex}
+.navlinks a{display:flex;align-items:center;min-height:47px;padding:11px 7px;font-size:14px;border-bottom:1px solid #edf2ef}
+.navlinks a:after{display:none}
+.menu-btn{display:flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
+.nav-cta{display:none}
+.nav-inner{min-height:72px}
+.split,.story-layout,.formwrap{grid-template-columns:minmax(0,1fr)}
+.hero .container{grid-template-columns:minmax(0,1fr)}
+.luxe-hero .container{grid-template-columns:minmax(0,1fr)}
+.section-heading{align-items:start;flex-wrap:wrap}
+.footergrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+.container{padding-left:20px;padding-right:20px}
+.topbar .container{display:flex;justify-content:center;text-align:center;gap:5px;padding:8px 14px;flex-wrap:wrap}
+.topbar .container span:first-child{display:none}
+.brand{font-size:15px;letter-spacing:-.05em}
+.brand em{font-size:8px;letter-spacing:1.5px}
+.brand-mark{flex:0 0 42px;width:42px;height:42px;border-radius:12px}
+.luxe-hero .container{padding-top:35px;padding-bottom:68px;gap:20px}
+.luxe-hero h1{font-size:clamp(38px,9.5vw,57px);letter-spacing:-.05em;margin:18px 0}
+.luxe-hero p{font-size:14px}
+.luxe-hero .actions{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.luxe-hero .actions .btn{width:100%;min-height:49px}
+.hero-chipline{gap:6px;margin-top:15px}
+.hero-chipline span{font-size:10px;padding:7px 9px}
+.hero-stage{height:370px;width:100%;min-height:0;max-width:510px}
+.hero-stage .main-photo{height:350px;width:90%;right:0;object-position:center 30%;border-radius:145px 145px 16px 16px}
+.hero-stage .stage-outline{inset:15px 12px 23px 13%;border-radius:150px 150px 18px 18px}
+.stage-card{left:0;bottom:4px;padding:12px 14px;max-width:89%;font-size:12px}
+.stage-card i{font-size:22px}
+.stage-card small{font-size:10px}
+.stage-round{width:74px;height:74px;top:18px;right:0;font-size:7px}
+.stage-round i{font-size:17px}
+.photo-pagehead{min-height:320px}
+.photo-pagehead .container{padding-top:44px;padding-bottom:52px}
+.photo-pagehead h1{font-size:clamp(35px,8vw,49px);overflow-wrap:anywhere}
+.photo-pagehead p{font-size:14px}
+.photo-pagehead .head-actions{gap:9px}
+.photo-pagehead .head-actions .btn{min-height:45px;flex:1 1 170px}
+.editorial-section,.section{padding-top:60px;padding-bottom:60px}
+.editorial-section h2{font-size:clamp(30px,7.6vw,43px)}
+.icon-rail{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.icon-tile{padding:18px 14px}
+.icon-tile i{font-size:23px;margin-bottom:12px}
+.icon-tile b{font-size:13px}
+.icon-tile p{font-size:11px}
+.department-feature-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+.dept-feature,.dept-feature.feature-wide{min-height:210px;padding:24px}
+.dept-feature h3{font-size:21px}
+.story-layout{gap:20px}
+.story-visual{padding:5px}
+.story-visual img{height:330px}
+.story-sticker{bottom:-8px;right:0;padding:13px;font-size:11px}
+.gallery-stage{grid-template-columns:minmax(0,1fr);gap:11px}
+.gallery-main{height:clamp(260px,77vw,385px)}
+.gallery-caption{left:20px;bottom:18px;right:15px}
+.gallery-caption h3{font-size:21px}
+.gallery-caption p{font-size:12px}
+.gallery-side{height:96px;gap:8px}
+.gallery-thumb{min-width:0;min-height:86px}
+.gallery-thumb span{font-size:9px;padding:18px 6px 7px;overflow-wrap:anywhere}
+.flow-row,.grid{grid-template-columns:minmax(0,1fr)}
+.flow-card{padding:23px}
+.stats-inner{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.stats-motion strong{font-size:22px}
+.stats-motion span{font-size:11px}
+.section-heading{display:flex;flex-direction:column;align-items:start;gap:15px}
+.section-heading h2{font-size:clamp(30px,7.6vw,42px)}
+.split-img{height:310px}
+.ticks{grid-template-columns:minmax(0,1fr)}
+.pagehead{padding:48px 0}
+.pagehead h1{font-size:38px}
+.fields{grid-template-columns:minmax(0,1fr);gap:0}
+.panel{padding:20px}
+.field input,.field select,.field textarea{font-size:16px}
+.formwrap{gap:16px}
+.cta{padding:28px;gap:16px}
+.cta h2{font-size:29px}
+.cta .actions{width:100%;display:grid;grid-template-columns:minmax(0,1fr)}
+.cta .actions .btn{width:100%}
+.footer{padding-top:48px}
+.footergrid{grid-template-columns:minmax(0,1fr);gap:22px}
+.footer-bottom{margin-top:30px}
+.chat{right:12px;bottom:85px;width:calc(100vw - 24px);height:min(470px,70dvh)}
+.chat-toggle{bottom:16px;right:17px}
+.whatsapp-fab{bottom:83px;right:17px}
+}
+@media(max-width:375px){
+.container{padding-left:15px;padding-right:15px}
+.brand{font-size:13px}
+.brand-mark{flex-basis:37px;width:37px;height:37px}
+.luxe-hero h1{font-size:37px}
+.hero-stage{height:310px}
+.hero-stage .main-photo{height:300px}
+.stage-card{bottom:3px}
+.icon-rail{grid-template-columns:minmax(0,1fr)}
+.photo-pagehead h1{font-size:33px}
+.gallery-thumb span{font-size:8px}
+}
+@media(hover:none){.card:hover,.icon-tile:hover,.flow-card:hover,.dept-feature:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+</style></head><body><div class="loader" id="loader"><div style="text-align:center"><div class="pulse" style="margin:auto"><i class="fa-solid fa-heart-pulse"></i></div><p style="color:white;font-weight:800;margin-top:24px">SAGAR MULTISPECIALITY HOSPITAL</p><small>WE CARE • WE CURE</small></div></div><div id="scrollProgress" aria-hidden="true"></div><div class="topbar"><div class="container"><span><i class="fa-solid fa-location-dot"></i> Main Hoshangabad Road, Bhopal, MP</span><span><i class="fa-solid fa-phone-volume"></i> 24/7 Helpline: <a href="tel:7880161616">7880161616</a> &nbsp;&nbsp; <i class="fa-solid fa-envelope"></i> <a href="mailto:contact@smhbhopal.com">contact@smhbhopal.com</a></span></div></div><header class="nav"><div class="container nav-inner"><a href="#/" class="brand"><span class="brand-mark"><i class="fa-solid fa-heart-pulse"></i></span><span>Sagar <span style="color:#1caa81">Multispeciality</span><br>Hospital<em>WE CARE • WE CURE</em></span></a><nav id="navlinks" class="navlinks"><a href="#/">Home</a><a href="#/about">About</a><a href="#/departments">Departments</a><a href="#/doctors">Doctors</a><a href="#/appointments">OPD Booking</a><a href="#/patients">Patient Guide</a><a href="#/contact">Contact</a></nav><a class="btn nav-cta" href="#/appointments"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a><button class="menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navlinks" id="menu"><i class="fa-solid fa-bars"></i></button></div></header><main id="app" aria-live="polite"></main><footer class="footer"><div class="container"><div class="footergrid"><div><div class="brand"><span class="brand-mark"><i class="fa-solid fa-heart-pulse"></i></span><span>Sagar Multispeciality<br>Hospital</span></div><p>Care with compassion, expertise and an unwavering commitment to the people of Bhopal.</p><p class="mini" style="color:#b7d7d5">Independent digital experience prototype. Not the hospital's official booking or medical records system.</p></div><div><h4>Explore</h4><a href="#/about">About Us</a><br><a href="#/departments">Departments</a><br><a href="#/doctors">Doctors</a><br><a href="#/patients">Patient Guide</a></div><div><h4>Patient Services</h4><a href="#/appointments">Appointment Demo</a><br><a target="_blank" rel="noopener" href="https://patient-portal.smhbhopal.com/book-appointment">Official Booking Portal</a><br><a href="#/contact">Contact & Directions</a><br><a href="tel:7880161616">Emergency Helpline</a><br><a href="https://wa.me/917880081306?text=Hello%20Sagar%20Multispeciality%20Hospital%2C%20I%20have%20a%20general%20enquiry." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Enquiry</a></div><div><h4>Get In Touch</h4><p>Main Hoshangabad Road, Near Shri Ram Colony, Bhopal, MP 462026</p><a href="tel:7880161616">7880161616</a><br><a href="mailto:contact@smhbhopal.com">contact@smhbhopal.com</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Sagar Multispeciality Hospital — Independent interface demonstration.</span><span>Digital concept by Maa Sati Technologies</span></div></div></footer><div class="chat" id="chat" role="dialog" aria-label="Hospital FAQ assistant"><div class="chat-header"><i class="fa-solid fa-headset"></i> SMH Guide <span style="font-weight:400;font-size:11px">— FAQ demo, not medical advice</span> <button id="closechat" style="float:right;background:none;border:0;color:white" aria-label="Close chat">✕</button></div><div id="messages" class="chat-messages"><div class="bubble">Hi! I can help with departments, appointment booking, OPD schedules, insurance and contact details. For emergencies, call <a href="tel:7880161616"><b>7880161616</b></a>.</div></div><form class="chat-form" id="chat-form"><input id="chat-input" required maxlength="250" aria-label="Ask a question" placeholder="Ask about appointments, doctors..." autocomplete="off"><button aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button></form></div><a class="whatsapp-fab" id="wa-float" aria-label="Contact Sagar Hospital on WhatsApp" target="_blank" rel="noopener" href="https://wa.me/917880081306?text=Hello%20Sagar%20Multispeciality%20Hospital%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."><i class="fa-brands fa-whatsapp"></i></a><button class="chat-toggle" id="chat-toggle" aria-label="Open hospital FAQ assistant"><i class="fa-regular fa-comment-dots"></i></button><script>
 const portal='https://patient-portal.smhbhopal.com/book-appointment';
 const departments=[['Cardiac Sciences','fa-heart-pulse','Heart care, cardiology and cardiac assessments.'],['Brain Sciences','fa-brain','Neurology and advanced brain care.'],['Orthopaedics','fa-bone','Joint replacement, sports injuries and mobility care.'],['Critical Care','fa-truck-medical','Intensive and multidisciplinary critical care.'],['Oncology','fa-ribbon','Medical and surgical cancer services.'],['Gynaecology & Obstetrics','fa-person-pregnant','Comprehensive women’s health services.'],['Paediatrics','fa-baby','Expert healthcare services for children.'],['Radiology','fa-x-ray','Imaging and diagnostic services.'],['Urology','fa-stethoscope','Urinary system health and treatment.'],['Accident & Emergency','fa-briefcase-medical','Emergency care and critical response.'],['Dental Care','fa-tooth','Dental consultation and oral health.'],['Nephrology','fa-droplet','Kidney care and related services.'],['Gastroenterology','fa-notes-medical','Digestive system care.'],['Dermatology','fa-hand-dots','Skin care and dermatology.'],['ENT','fa-ear-listen','Ear, nose and throat care.'],['Internal Medicine','fa-user-doctor','Comprehensive adult medical care.']];
 const directory=[{name:'Cardiac Sciences Team',dept:'Cardiac Sciences',days:'Schedule to be confirmed'},{name:'Brain Sciences Team',dept:'Brain Sciences',days:'Schedule to be confirmed'},{name:'Orthopaedics Team',dept:'Orthopaedics',days:'Schedule to be confirmed'},{name:'Women’s Health Team',dept:'Gynaecology & Obstetrics',days:'Schedule to be confirmed'},{name:'Paediatrics Team',dept:'Paediatrics',days:'Schedule to be confirmed'},{name:'Internal Medicine Team',dept:'Internal Medicine',days:'Schedule to be confirmed'}];
@@ -211,9 +327,9 @@ function updateScrollBar(){const height=document.documentElement.scrollHeight-in
 window.addEventListener('scroll',updateScrollBar,{passive:true});window.addEventListener('resize',updateScrollBar);
 
 const routes={'/':home,'/about':about,'/departments':deptPage,'/doctors':doctors,'/appointments':booking,'/patients':patients,'/contact':contact};
-function render(){const path=(location.hash.slice(1)||'/').split('?')[0];document.getElementById('app').innerHTML=(routes[path]||home)();document.querySelectorAll('.navlinks a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+path));document.getElementById('navlinks').classList.remove('open');window.scrollTo({top:0,behavior:'instant'});const waFloat=document.getElementById('wa-float');if(waFloat)waFloat.href=waUrl('Hello Sagar Multispeciality Hospital, I would like information about '+(path==='/'?'your services':path.slice(1).replaceAll('-',' '))+'.');initHomeInteraction();updateScrollBar();document.title=(path==='/'?'Home':path.slice(1).replace(/^./,c=>c.toUpperCase()))+' | Sagar Multispeciality Hospital';if(path==='/appointments'){const date=document.getElementById('bookdate');date.min=new Date().toLocaleDateString('en-CA');document.getElementById('bookingform').addEventListener('submit',e=>{e.preventDefault();window.open(portal,'_blank','noopener,noreferrer')});document.getElementById('booking-wa').addEventListener('click',()=>{const department=document.getElementById('bookdept').value||'OPD consultation';window.open(waUrl('Hello Sagar Multispeciality Hospital, I would like to enquire about OPD availability for '+department+'. Please guide me through the official booking process.'),'_blank','noopener,noreferrer')})}if(path==='/contact'){const wf=document.getElementById('wa-enquiry');if(wf)wf.addEventListener('submit',e=>{e.preventDefault();const topic=document.getElementById('wa-topic').value;window.open(waUrl('Hello Sagar Multispeciality Hospital, I would like information about '+topic+'. Please guide me.'),'_blank','noopener,noreferrer')})}if(path==='/doctors'){document.querySelectorAll('[data-dept]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-dept]').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('doctorgrid').innerHTML=doctorCards(b.dataset.dept==='All'?directory:directory.filter(x=>x.dept===b.dataset.dept))}))}}
+function render(){const path=(location.hash.slice(1)||'/').split('?')[0];document.getElementById('app').innerHTML=(routes[path]||home)();document.querySelectorAll('.navlinks a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+path));document.getElementById('navlinks').classList.remove('open');document.getElementById('menu').setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'instant'});const waFloat=document.getElementById('wa-float');if(waFloat)waFloat.href=waUrl('Hello Sagar Multispeciality Hospital, I would like information about '+(path==='/'?'your services':path.slice(1).replaceAll('-',' '))+'.');initHomeInteraction();updateScrollBar();document.title=(path==='/'?'Home':path.slice(1).replace(/^./,c=>c.toUpperCase()))+' | Sagar Multispeciality Hospital';if(path==='/appointments'){const date=document.getElementById('bookdate');date.min=new Date().toLocaleDateString('en-CA');document.getElementById('bookingform').addEventListener('submit',e=>{e.preventDefault();window.open(portal,'_blank','noopener,noreferrer')});document.getElementById('booking-wa').addEventListener('click',()=>{const department=document.getElementById('bookdept').value||'OPD consultation';window.open(waUrl('Hello Sagar Multispeciality Hospital, I would like to enquire about OPD availability for '+department+'. Please guide me through the official booking process.'),'_blank','noopener,noreferrer')})}if(path==='/contact'){const wf=document.getElementById('wa-enquiry');if(wf)wf.addEventListener('submit',e=>{e.preventDefault();const topic=document.getElementById('wa-topic').value;window.open(waUrl('Hello Sagar Multispeciality Hospital, I would like information about '+topic+'. Please guide me.'),'_blank','noopener,noreferrer')})}if(path==='/doctors'){document.querySelectorAll('[data-dept]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-dept]').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('doctorgrid').innerHTML=doctorCards(b.dataset.dept==='All'?directory:directory.filter(x=>x.dept===b.dataset.dept))}))}}
 window.filterDepartments=q=>{document.getElementById('deptgrid').innerHTML=departments.filter(x=>x.join(' ').toLowerCase().includes(q.toLowerCase())).map(card).join('')||'<p>No departments matched.</p>'};
-function toggleChat(open){document.getElementById('chat').classList.toggle('open',open);if(open)document.getElementById('chat-input').focus()}window.toggleChat=toggleChat;document.getElementById('chat-toggle').onclick=()=>toggleChat(!document.getElementById('chat').classList.contains('open'));document.getElementById('closechat').onclick=()=>toggleChat(false);document.getElementById('menu').onclick=()=>document.getElementById('navlinks').classList.toggle('open');
+function toggleChat(open){document.getElementById('chat').classList.toggle('open',open);if(open)document.getElementById('chat-input').focus()}window.toggleChat=toggleChat;document.getElementById('chat-toggle').onclick=()=>toggleChat(!document.getElementById('chat').classList.contains('open'));document.getElementById('closechat').onclick=()=>toggleChat(false);document.getElementById('menu').onclick=()=>{const open=document.getElementById('navlinks').classList.toggle('open');document.getElementById('menu').setAttribute('aria-expanded',String(open))};document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('navlinks').classList.remove('open');document.getElementById('menu').setAttribute('aria-expanded','false');toggleChat(false)}});
 function safe(t){return t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}function response(t){t=t.toLowerCase();if(/emergency|urgent|ambulance|chest pain/.test(t))return 'For emergencies, please call the hospital immediately at 7880161616. This assistant cannot provide urgent medical guidance.';if(/appoint|booking|slot|opd|schedule|timing/.test(t))return 'For confirmed OPD appointments and live doctor schedules, use the official patient portal: patient-portal.smhbhopal.com/book-appointment. The website booking interface is only a demonstration.';if(/insurance|cashless|tpa/.test(t))return 'SMH describes insurance and cashless assistance on its official website. Please contact the hospital to verify your insurer and policy eligibility.';if(/doctor|specialist/.test(t))return 'You can browse our specialty-team demo in the Doctors section. Individual names and live timings need verification by hospital administrators.';if(/address|location|where|map/.test(t))return 'SMH is on Main Hoshangabad Road, near Shri Ram Colony, Bhopal, MP 462026. See our Contact page for map directions.';if(/phone|contact|number|call/.test(t))return 'You can contact Sagar Multispeciality Hospital at 7880161616 or contact@smhbhopal.com.';if(/department|cardiac|neuro|ortho|service/.test(t))return 'SMH offers services including Cardiac Sciences, Brain Sciences, Orthopaedics, Oncology, Radiology, Paediatrics and many more. Explore the Departments page.';return 'I can help with general information on appointments, specialties, insurance, directions and hospital contacts. I cannot diagnose or offer clinical advice. Call the hospital for specific questions.'}
 document.getElementById('chat-form').onsubmit=e=>{e.preventDefault();const inp=document.getElementById('chat-input'),t=inp.value.trim();if(!t)return;const box=document.getElementById('messages');box.insertAdjacentHTML('beforeend','<div class="bubble me">'+safe(t)+'</div><div class="bubble">'+safe(response(t))+'</div>');box.scrollTop=box.scrollHeight;inp.value=''};document.getElementById('year').textContent=new Date().getFullYear();window.addEventListener('hashchange',render);render();window.addEventListener('load',()=>document.getElementById('loader').classList.add('done'));setTimeout(()=>document.getElementById('loader').classList.add('done'),1200);
 </script></body></html>
