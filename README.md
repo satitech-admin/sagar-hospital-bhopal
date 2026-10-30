@@ -5,6 +5,17 @@
 
 > **Independent concept demo**, not the official SMH website. Patient bookings, medical records, and live doctor availability are not connected. Never enter patient data into prototype workflows.
 
+## Premium redesign (October 30, 2026)
+- Cinematic dark-teal hero with animated orbit, image composition, floating appointment card, micro-interactions and CTA
+- Continuous speciality marquee with hover pause
+- Interactive quick-access tiles, featured speciality panels with hover transitions
+- Editorial care-story section and animated three-step patient journey
+- Three-image interactive facility concept gallery: manual previous/next, thumbnail selection and optional auto-slide
+- IntersectionObserver scroll reveals and top scroll-progress indicator
+- FAQ accordions, reduced-motion support, mobile-first responsive reflow
+- Live FAQ chat, doctor-team filtering, searchable departments and booking handoff retained
+- Illustrative photography, not official hospital images; replace after hospital approval
+
 ## Features
 - Responsive multi-page experience using hash-based routing (GitHub Pages-friendly)
 - Home, About, Departments, Doctors, OPD Appointment Demo, Patient Guide, Contact
